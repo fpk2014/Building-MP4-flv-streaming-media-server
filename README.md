@@ -13,14 +13,21 @@
   输入nano /opt/nginx/conf/nginx.conf
 ******************************************************************************************************************** 
   server
+  
     {
+    
         listen 80 default_server;
+        
         #listen [::]:80 default_server ipv6only=on;
+        
         server_name www.lnmp.org;
+        
         index index.html index.htm index.php;
+        
         root  /home/wwwroot/default;
 
         #error_page   404   /404.html;
+        
         include enable-php.conf;
 ********************************************添加的东西****************************************************************
         
