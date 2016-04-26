@@ -11,7 +11,7 @@
 4.脚本需要修改/opt/nginx/conf/nginx.conf，添加flv,mp4的支持
  
   输入nano /opt/nginx/conf/nginx.conf
- 
+******************************************************************************************************************** 
   server
     {
         listen 80 default_server;
@@ -19,9 +19,10 @@
         server_name www.lnmp.org;
         index index.html index.htm index.php;
         root  /home/wwwroot/default;
+
         #error_page   404   /404.html;
         include enable-php.conf;
-**********************************************************************************************************************
+********************************************添加的东西****************************************************************
         location ~ \.flv$
         {
           flv;
