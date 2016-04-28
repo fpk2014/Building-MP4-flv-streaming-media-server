@@ -1,5 +1,5 @@
 
-1.脚本需要安装lnmp,目前该脚本只在raspibian上测试过，支持debian系统，也可能支持ubuntu（待测试）
+1.本脚本需要安装lnmp,目前该脚本在raspibian上顺利安装nginx，支持debian系统，也可能支持ubuntu（待测试）
   
   lnmp一键安装包：http://lnmp.org/
 
