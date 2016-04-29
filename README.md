@@ -9,7 +9,9 @@
 3.安装方法:
            python nginxscript.py
 
-4.脚本需要修改/opt/nginx/conf/nginx.conf，添加flv,mp4的支持
+4.安装完成输入nginx -V，查看是否已经安装了zlib,pcre,nginx_mod_h264_streaming,nginx-rtmp-module
+
+5.脚本需要修改/opt/nginx/conf/nginx.conf，添加flv,mp4的支持
  
   输入nano /opt/nginx/conf/nginx.conf
 ******************************************************************************************************************** 
