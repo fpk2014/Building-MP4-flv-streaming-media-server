@@ -1,3 +1,5 @@
+网址：http://blog.nothing.ml/?p=278
+
 
 1.本脚本需要安装lnmp,目前该脚本在raspibian上顺利安装nginx，支持debian系统，也可能支持ubuntu（待测试）
   
