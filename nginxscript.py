@@ -57,7 +57,6 @@ install('yamdi-1.9')
 installOp('cd %s && ./configure --prefix=/usr/local/pcre && make && make install'%path('zlib-1.2.3'), "zlib")
 
 
-nginxpath = path('nginx-1.8.1')
 com = 'cd %s && ./configure --user=www --group=www --prefix=/usr/local/nginx \
     --with-http_stub_status_module --with-http_ssl_module --with-http_spdy_module \
     --with-http_gzip_static_module --with-ipv6 --with-http_sub_module --with-http_flv_module \
@@ -65,11 +64,11 @@ com = 'cd %s && ./configure --user=www --group=www --prefix=/usr/local/nginx \
     --with-zlib=%s \
     --add-module=%s \
     --with-http_mp4_module --with-debug \
-    --add-module=%s'%(nginxpath,path('pcre-7.9'),zlibpath,path('nginx_mod_h264_streaming-2.2.7'),path('nginx-rtmp-module-master'))
+    --add-module=%s'%(path('nginx-1.8.1'),path('pcre-7.9'),path("zlib-1.2.3"),path('nginx_mod_h264_streaming-2.2.7'),path('nginx-rtmp-module-master'))
 installOp(com, "configure nginx")
 
 print "write '-Werror' into Makefile"
-bugpath = nginxpath + "/objs/Makefile"
+bugpath = path('nginx-1.8.1') + "/objs/Makefile"
 with open(bugpath) as f:
     data = f.read();
 f.close()
@@ -80,4 +79,3 @@ f.close()
 
 installOp('cd %s && make && make install' % nginxpath, "nginx")
 print 'install ngninx success'
-    
